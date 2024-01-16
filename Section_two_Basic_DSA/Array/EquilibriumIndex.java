@@ -1,3 +1,5 @@
+package Array;
+
 public class EquilibriumIndex {
 
     static void findIndex(int[] arr, int mid, int left, int right) {

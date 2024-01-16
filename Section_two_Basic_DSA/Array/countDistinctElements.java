@@ -1,3 +1,4 @@
+package Array;
 
 import java.util.*;
 
@@ -14,7 +15,7 @@ public class countDistinctElements {
     }
 
     public static void main(String[] args) {
-        int arr[] = { 1, 1, 2, 3, 3, 4, 5 };
+        int arr[] = { 1, 1, 2, 3, 3, 4, 2, 1, 5 };
         countElements(arr);
     }
 }

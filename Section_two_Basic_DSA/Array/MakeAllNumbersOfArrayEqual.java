@@ -1,3 +1,5 @@
+package Array;
+
 public class MakeAllNumbersOfArrayEqual {
 
     static boolean checkForEqual(int[] arr) {

@@ -1,5 +1,4 @@
-
-package Section_two_Basic_DSA.Array;
+package Array;
 
 import java.lang.*;
 

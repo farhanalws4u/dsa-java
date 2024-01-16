@@ -1,8 +1,10 @@
+package Array;
+
 public class Immediate_smaller {
 
 	static int findSmaller(int arr[], int ele) {
 
-		float smaller = Float.NEGATIVE_INFINITY;
+		int smaller = Integer.MIN_VALUE;
 		for (int i = 0; i < arr.length; i++) {
 
 			if (arr[i] < ele) {
@@ -11,7 +13,7 @@ public class Immediate_smaller {
 					smaller = arr[i];
 			}
 		}
-		return (int) smaller;
+		return smaller;
 	}
 
 	public static void main(String args[]) {
