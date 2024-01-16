@@ -28,3 +28,4 @@ public class MakeAllNumbersOfArrayEqual {
         System.out.println(checkForEqual(arr));
     }
 }
+// lkklkl
