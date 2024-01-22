@@ -1,6 +1,8 @@
+package Array;
+
 public class SubArray {
 
-    static void generateNaive(int[] arr) {
+    static void generateNaive(int[] arr) { // do it using include exclude method coz its not good approach.
 
         for (int start = 0; start < arr.length; start++) {
 
@@ -19,7 +21,7 @@ public class SubArray {
     }
 
     public static void main(String[] args) {
-        int[] arr = { 1, 2, 3, 4 };
+        int[] arr = { 1, 2, 3 };
         generateNaive(arr);
     }
 }

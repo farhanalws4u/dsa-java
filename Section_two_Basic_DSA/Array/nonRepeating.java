@@ -1,3 +1,4 @@
+package Array;
 
 public class nonRepeating {
     static void findNonRepeating(int[] arr) {

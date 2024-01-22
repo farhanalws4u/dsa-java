@@ -1,3 +1,4 @@
+
 package Recursion;
 
 import java.util.ArrayList;
@@ -29,14 +30,20 @@ public class subsetsOfArray {
         findSubset(nums, curr, index + 1);
 
         // backtrack
-        curr.remove(curr.size() - 1);
+        curr.remove(curr.size() - 1); // in c++ we don't need this line. see below explanation.
 
     }
 
     public static void main(String args[]) {
-        int arr[] = { 0 };
+        int arr[] = { 1, 2, 3 };
         subsets(arr);
         System.out.println(finalRes);
     }
 
 }
+
+// if we implement this same implementation in C++ , when don't need to
+// backtrack because in c++ a copy of curr array will be passed every time we
+// make the recursive call but in java array is passed by default as reference
+// not by value so we have to remove elements from the current array after it is
+// printed or utilized in the answer.

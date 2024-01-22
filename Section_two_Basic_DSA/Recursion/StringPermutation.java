@@ -13,7 +13,7 @@ public class StringPermutation {
 
         // base case
         if (index >= str.length()) {
-            System.out.println(str);
+            System.out.print(str + "\t");
         }
 
         for (int j = index; j < str.length(); j++) { // "abc"

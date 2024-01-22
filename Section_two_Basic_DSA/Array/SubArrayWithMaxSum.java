@@ -1,3 +1,5 @@
+package Array;
+
 public class SubArrayWithMaxSum {
 
     static void findMaxSumNaive(int[] arr) { // find subArrays and sum them to find max sum.
@@ -37,8 +39,9 @@ public class SubArrayWithMaxSum {
 
     public static void main(String[] args) {
         int arr[] = { -2, -3, 4, -1, -2, 1, 5, -3 };
+        // int arr[] = { 1, 2, 3 };
 
-        // findMaxSumNaive(arr);
+        findMaxSumNaive(arr);
         findMaxSumEfficient(arr);
     }
 }

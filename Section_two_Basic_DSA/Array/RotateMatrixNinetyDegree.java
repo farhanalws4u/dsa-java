@@ -1,4 +1,4 @@
-package interview_self_paced.Section_two_Basic_DSA.Array;
+package Array;
 
 public class RotateMatrixNinetyDegree {
     public static void rotate(int[][] matrix) {
@@ -6,6 +6,7 @@ public class RotateMatrixNinetyDegree {
         int row = matrix.length;
         int col = matrix[0].length;
 
+        // reverse the element of a column in vertical direction.
         for (int i = 0; i < row / 2; i++) {
             for (int j = 0; j < col; j++) {
                 int temp = matrix[i][j];
@@ -13,7 +14,7 @@ public class RotateMatrixNinetyDegree {
                 matrix[row - 1 - i][j] = temp;
             }
         }
-
+        // transpose of matrix..
         for (int k = 0; k < row; k++) {
             for (int l = k + 1; l < col; l++) {
                 int temp = matrix[k][l];

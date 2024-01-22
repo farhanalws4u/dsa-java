@@ -1,28 +1,21 @@
+package Array;
+
 import java.util.*;
 import java.util.*;
 
 public class ReplaceElementByRank {
 
-    static void replace(int[] arr) {
-        int len = arr.length;
-        HashMap<Integer, Integer> map = new HashMap<>();
-        int temp[] = new int[len];
+    static void replaceNew(int[] arr) {
+        int[] temp = new int[arr.length];
 
-        for (int j = 0; j < len; j++) {
-            temp[j] = arr[j];
+        for (int i = 0; i < arr.length; i++) {
+            temp[i] = arr[i];
         }
-
         Arrays.sort(temp);
 
-        for (int i = 0; i < len; i++) {
-            map.put(temp[i], i + 1);
+        for (int j = 0; j < arr.length; j++) {
+            arr[j] = linearSearch(temp, arr[j]) + 1;
         }
-
-        for (int i = 0; i < len; i++) {
-            int index = linearSearch(arr, temp[i]);
-            arr[index] = map.get(temp[i]);
-        }
-
         for (int ele : arr) {
             System.out.println(ele);
         }
@@ -40,6 +33,6 @@ public class ReplaceElementByRank {
     public static void main(String args[]) {
         int[] arr = { 40, 10, 20, 30 };
 
-        replace(arr);
+        replaceNew(arr);
     }
 }

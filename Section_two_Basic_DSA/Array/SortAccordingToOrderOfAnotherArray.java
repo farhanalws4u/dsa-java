@@ -1,3 +1,5 @@
+package Array;
+
 import java.util.*;
 
 class sortAccordingToOrderOfAnotherArray {
@@ -20,6 +22,9 @@ class sortAccordingToOrderOfAnotherArray {
                 arr[resIndex++] = temp[k];
                 visited[k] = 1;
             }
+            for (int ele : arr)
+                System.out.print(ele + "\t");
+            System.out.println("");
         }
 
         for (int l = 0; l < arr.length; l++) {

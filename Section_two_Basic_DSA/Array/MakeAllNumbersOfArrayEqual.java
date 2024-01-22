@@ -18,6 +18,9 @@ public class MakeAllNumbersOfArrayEqual {
                 return false;
             }
         }
+        for (int i : arr) {
+            System.out.println(i);
+        }
 
         return true;
     }

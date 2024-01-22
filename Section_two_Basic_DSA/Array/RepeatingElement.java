@@ -1,3 +1,4 @@
+package Array;
 
 public class RepeatingElement {
     static void findRepeating(int[] arr) {

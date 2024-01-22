@@ -18,6 +18,10 @@ class StringSubsets {
 
         // include
         findSubsets(str, curr + str.charAt(index), index + 1);
+
+        // here we are not using the backtracking to remove last element from the curr
+        // string because every time we are appending the character to curr and passing
+        // it to recursive call, a copy of string is created and gets passed.
     }
 
     public static void main(String args[]) {
