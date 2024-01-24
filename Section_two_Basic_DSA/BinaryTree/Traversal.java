@@ -1,6 +1,26 @@
-package interview_self_paced.Section_two_Basic_DSA.BinaryTree;
+package BinaryTree;
+
+import java.util.Scanner;
 
 public class Traversal {
+
+    static TreeNode createTree(TreeNode root) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter data:");
+        int data = sc.nextInt();
+
+        root = new TreeNode(data);
+
+        if (data == -1) {
+            return null;
+        }
+        System.out.println("Enter data for left of " + data);
+        root.left = createTree(root.left);
+        System.out.println("Enter data for right of " + data);
+        root.right = createTree(root.right);
+
+        return root;
+    }
 
     static void inOrderTraversal(TreeNode root) {
         if (root != null) {
@@ -40,12 +60,10 @@ public class Traversal {
     }
 
     public static void main(String[] args) {
-        TreeNode root = new TreeNode(10);
-        root.left = new TreeNode(20);
-        root.right = new TreeNode(30);
-        root.left.left = new TreeNode(40);
-        root.left.right = new TreeNode(50);
-        root.right.right = new TreeNode(70);
+        TreeNode root = null;
+
+        root = createTree(root);
+
         inOrderTraversal(root);
     }
 }

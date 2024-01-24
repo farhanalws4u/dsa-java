@@ -1,6 +1,6 @@
-package interview_self_paced.Section_two_Basic_DSA.BinaryTree;
+package BinaryTree;
 
-import interview_self_paced.Section_two_Basic_DSA.BinaryTree.Traversal;
+import BinaryTree.Traversal;
 
 public class HeightOfBinaryTree {
 

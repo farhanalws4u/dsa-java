@@ -1,6 +1,6 @@
-package interview_self_paced.Section_two_Basic_DSA.BinaryTree;
+package BinaryTree;
 
-import interview_self_paced.Section_two_Basic_DSA.BinaryTree.*;
+import BinaryTree.*;
 
 public class CheckBalanceTree {
 
@@ -10,11 +10,6 @@ public class CheckBalanceTree {
 
             int leftHeight = HeightOfBinaryTree.getHeight(root.left);
             int rightHeight = HeightOfBinaryTree.getHeight(root.right);
-
-            // System.out.print("for node value: " + root.value);
-            // System.out.println(" right heigh: " + rightHeight + " left height: " +
-            // leftHeight + " diff: "
-            // + (rightHeight - leftHeight));
 
             if (Math.abs(rightHeight - leftHeight) > 1)
                 return false;

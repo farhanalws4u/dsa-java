@@ -1,13 +1,13 @@
-package interview_self_paced.Section_two_Basic_DSA.BinaryTree;
+package BinaryTree;
 
-import interview_self_paced.Section_two_Basic_DSA.BinaryTree.*;
+import BinaryTree.*;
 
 public class MaxWidth {
 
     static int getMaxWidth(TreeNode root) {
         int h = HeightOfBinaryTree.getHeight(root);
         int finalWidth = 0;
-        for (int i = 0; i <= h; i++) {
+        for (int i = 1; i <= h; i++) {
             int currWidth = printLevels(root, i);
             if (currWidth > finalWidth)
                 finalWidth = currWidth;

@@ -1,6 +1,6 @@
-package interview_self_paced.Section_two_Basic_DSA.BinaryTree;
+package BinaryTree;
 
-import interview_self_paced.Section_two_Basic_DSA.BinaryTree.*;
+import BinaryTree.*;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -12,20 +12,27 @@ public class LevelOrderTraversal {
         if (root != null) {
             Queue<TreeNode> q = new LinkedList<>();
             q.add(root);
+            q.add(null);
 
-            while (q.isEmpty() != true) {
+            while (!q.isEmpty()) {
+                TreeNode current = q.remove();
 
-                TreeNode nextFromQ = q.remove();
+                if (current == null) {
+                    System.out.println(" ");
 
-                System.out.println(nextFromQ.value);
+                    if (!q.isEmpty()) {
+                        q.add(null);
+                    }
+                } else {
+                    System.out.print(current.value + " ");
 
-                if (nextFromQ.left != null)
-                    q.add(nextFromQ.left);
-                if (nextFromQ.right != null)
-                    q.add(nextFromQ.right);
+                    if (current.left != null)
+                        q.add(current.left);
+                    if (current.right != null)
+                        q.add(current.right);
+                }
             }
         }
-        return;
     }
 
     static void printLevelOrderRecursive(TreeNode root) {
@@ -58,8 +65,9 @@ public class LevelOrderTraversal {
     }
 
     public static void main(String args[]) {
-        TreeNode root = Traversal.createOfHeightThree();
+        TreeNode root = null;
+        root = Traversal.createTree(root);
         printLevelOrder(root);
-        System.out.println(getSize(root));
+        System.out.println("size of tree is " + getSize(root));
     }
 }

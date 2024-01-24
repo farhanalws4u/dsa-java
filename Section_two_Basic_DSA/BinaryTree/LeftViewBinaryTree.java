@@ -1,9 +1,9 @@
-package interview_self_paced.Section_two_Basic_DSA.BinaryTree;
+package BinaryTree;
 
 import java.util.LinkedList;
 import java.util.Queue;
 
-import interview_self_paced.Section_two_Basic_DSA.BinaryTree.*;
+import BinaryTree.*;
 
 public class LeftViewBinaryTree {
 

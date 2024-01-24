@@ -5,11 +5,14 @@ import java.util.Scanner;
 public class CreationAndTraverse {
 
     static Node createNodes() {
+
         Scanner in = new Scanner(System.in);
         System.out.println("Enter the size of the List");
         int n = in.nextInt();
+
         Node head = null;
         Node temp = null;
+
         for (int i = 0; i < n; i++) {
             System.out.println("Enter data value of Node" + " " + i + 1);
             int data = in.nextInt();
