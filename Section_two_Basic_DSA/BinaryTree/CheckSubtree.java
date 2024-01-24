@@ -1,6 +1,6 @@
-package interview_self_paced.Section_two_Basic_DSA.BinaryTree;
+package BinaryTree;
 
-import interview_self_paced.Section_two_Basic_DSA.BinaryTree.*;
+import BinaryTree.*;
 import java.util.*;
 
 public class CheckSubtree {
