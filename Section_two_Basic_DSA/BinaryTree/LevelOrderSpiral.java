@@ -1,9 +1,9 @@
-package interview_self_paced.Section_two_Basic_DSA.BinaryTree;
+package BinaryTree;
 
 import java.util.Deque;
 import java.util.LinkedList;
 
-import interview_self_paced.Section_two_Basic_DSA.BinaryTree.*;
+import BinaryTree.*;
 
 public class LevelOrderSpiral {
 

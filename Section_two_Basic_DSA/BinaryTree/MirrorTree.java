@@ -1,3 +1,4 @@
+package BinaryTree;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -6,7 +7,7 @@ import java.util.Queue;
 
 public class MirrorTree {
 
-    static void convertToMirror(TreeNode root) {
+    static void convertToMirror(TreeNode root) { // easy question but vv important
         if (root == null)
             return;
 

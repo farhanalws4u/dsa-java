@@ -55,7 +55,7 @@ public class LevelOrderTraversal {
         }
     }
 
-    static int getSize(TreeNode root) {
+    static int getSize(TreeNode root) { // no. of nodes in a tree.
         if (root == null)
             return 0;
 

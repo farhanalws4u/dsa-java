@@ -1,4 +1,4 @@
-package interview_self_paced.Section_two_Basic_DSA.BinarySearchTree;
+package BinarySearchTree;
 
 public class BinarySearchTree {
 
@@ -46,9 +46,14 @@ public class BinarySearchTree {
         } else if (key > root.data) {
             root.right = deleteRecursive(root.right, key);
         } else {
-            // means element is found and now there comes two conditions on the element.
+            // means element is found and now there comes three conditions on the element.
 
-            // 1.) Node has only on child node either left or right.
+            // 1.) Node has no child nodes.
+
+            if (root.left == null && root.right == null)
+                return null;
+
+            // 2.) Node has only one child node either left or right.
 
             if (root.right == null) {
                 BstNode temp = root.left;
@@ -58,7 +63,7 @@ public class BinarySearchTree {
                 return temp;
             }
 
-            // 2.) Node has two child nodes.
+            // 3.) Node has two child nodes.
 
             int inOrderValue = getInOrderSuccessor(root.right);
             root.data = inOrderValue;
@@ -67,12 +72,11 @@ public class BinarySearchTree {
             // inOrderSuccessor also
 
             deleteRecursive(root.right, inOrderValue);
-
         }
-
         return root;
-
     }
+
+    // InOrderSuccessor => left most node of the right subtree.
 
     public static int getInOrderSuccessor(BstNode root) {
         BstNode temp = root;
